@@ -10,11 +10,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    final String[] MODEL_ANSWERS = {"a student","First In First Out","Lisp, Erlang, Haskell","False"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,17 +36,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void submitQuiz() {
 
-        getAnswer();
-
+        Toast.makeText(this,"Your Grade: "+calculateGrade(getAnswer()),Toast.LENGTH_LONG).show();
     }
 
-    private void getAnswer() {
+
+    private String[] getAnswer() {
 
         String questionOneAnswer = getQuestionOneAnswer();
         String questionTwoAnswer = getQuestionTwoAnswer();
-        ArrayList<String> questionThreeAnswer = getQuestionThreeAnswer();
+        String questionThreeAnswer = getQuestionThreeAnswer();
         String questionFourAnswer = getQuestionFourAnswer();
 
+        String[] answers = {questionOneAnswer,questionTwoAnswer,questionThreeAnswer,questionFourAnswer};
+        return answers;
     }
 
 
@@ -79,9 +79,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return null;
     }
 
-    private ArrayList<String> getQuestionThreeAnswer() {
+    private String getQuestionThreeAnswer() {
 
-        ArrayList<String> questionThreeAnswer = new ArrayList<>();
+        String questionThreeAnswer = "";
 
         CheckBox checkBoxOne = findViewById(R.id.question_three_check_box_one);
         CheckBox checkBoxTwo = findViewById(R.id.question_three_check_box_two);
@@ -89,16 +89,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         CheckBox checkBoxFour = findViewById(R.id.question_three_check_box_four);
 
         if(checkBoxOne.isChecked())
-            questionThreeAnswer.add(checkBoxOne.getText().toString());
+            questionThreeAnswer += checkBoxOne.getText().toString()+", ";
 
         if(checkBoxTwo.isChecked())
-            questionThreeAnswer.add(checkBoxTwo.getText().toString());
+            questionThreeAnswer += checkBoxTwo.getText().toString()+", ";
 
         if(checkBoxThree.isChecked())
-            questionThreeAnswer.add(checkBoxThree.getText().toString());
+            questionThreeAnswer += checkBoxThree.getText().toString()+", ";
 
         if(checkBoxFour.isChecked())
-            questionThreeAnswer.add(checkBoxFour.getText().toString());
+            questionThreeAnswer += checkBoxFour.getText().toString()+", ";
 
         return questionThreeAnswer;
 
@@ -116,6 +116,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         return null;
+
+    }
+
+
+    private double calculateGrade(String[] answers) {
+
+        double grade = 0;
+
+        for (int i = 0; i < answers.length; i++){
+
+            if (i != 2) {
+                if (answers[i] == null)
+                    grade += 0;
+                else if (answers[i].toLowerCase().equals(MODEL_ANSWERS[i].toLowerCase()))
+                    grade += 1;
+            }else {
+                    grade += calculateGradeForQuestionThree(answers[i]);
+                }
+        }
+
+        return grade;
+    }
+
+    private double calculateGradeForQuestionThree(String answer) {
+
+        double grade = 0;
+        int numberOFCorrectAnswers = MODEL_ANSWERS[2].split(",").length;
+
+
+        if(answer.length() == 0)
+            return 0;
+
+        String[] answers = answer.split(",");
+
+
+        for(int i = 0 ; i < answers.length-1; i++)
+            if (MODEL_ANSWERS[2].contains(answers[i]))
+                grade += 1;
+
+
+        if(answers.length-1 > numberOFCorrectAnswers)
+            grade -= 1;
+
+        return grade/ numberOFCorrectAnswers;
 
     }
 
