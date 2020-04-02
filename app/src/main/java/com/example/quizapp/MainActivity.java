@@ -32,13 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        switch(view.getId()) {
-            case R.id.submit_btn:
-                submitQuiz();
-                break;
-
-        }
-
+        if (view.getId() == R.id.submit_btn)
+            submitQuiz();
     }
 
     private void submitQuiz() {
