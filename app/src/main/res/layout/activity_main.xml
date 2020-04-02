@@ -40,6 +40,40 @@
                 android:textSize="24sp"
                 android:text="Q 1" />
 
+            <TextView
+                android:id="@+id/question_one_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="A programmer is to a computer as a teacher is to"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A desk"
+                />
+            <RadioButton
+                android:id="@+id/radio_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A student"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A library"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A principal"
+                />
 
         </LinearLayout>
 
