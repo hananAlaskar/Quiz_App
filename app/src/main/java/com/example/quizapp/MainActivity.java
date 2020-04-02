@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -46,7 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String questionOneAnswer = getQuestionOneAnswer();
         String questionTwoAnswer = getQuestionTwoAnswer();
+        ArrayList<String> questionThreeAnswer = getQuestionThreeAnswer();
     }
+
 
     private String getQuestionOneAnswer() {
 
@@ -64,6 +69,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String questionTwoAnswer = questionTwoAnswerEditText.getText().toString();
 
         return questionTwoAnswer;
+    }
+
+    private ArrayList<String> getQuestionThreeAnswer() {
+
+        ArrayList<String> questionThreeAnswer = new ArrayList<>();
+
+        CheckBox checkBoxOne = findViewById(R.id.question_three_check_box_one);
+        CheckBox checkBoxTwo = findViewById(R.id.question_three_check_box_two);
+        CheckBox checkBoxThree = findViewById(R.id.question_three_check_box_three);
+        CheckBox checkBoxFour = findViewById(R.id.question_three_check_box_four);
+
+        if(checkBoxOne.isChecked())
+            questionThreeAnswer.add(checkBoxOne.getText().toString());
+
+        if(checkBoxTwo.isChecked())
+            questionThreeAnswer.add(checkBoxTwo.getText().toString());
+
+        if(checkBoxThree.isChecked())
+            questionThreeAnswer.add(checkBoxThree.getText().toString());
+
+        if(checkBoxFour.isChecked())
+            questionThreeAnswer.add(checkBoxFour.getText().toString());
+
+        return questionThreeAnswer;
 
     }
+
 }
