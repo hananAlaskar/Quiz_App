@@ -81,7 +81,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_margin="16dp"
             android:padding="16dp"
             android:background="@android:color/white">
@@ -93,6 +93,19 @@
                 android:textSize="24sp"
                 android:text="Q 2" />
 
+            <TextView
+                android:id="@+id/question_two_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="What is FIFO" />
+
+            <EditText
+                android:id="@+id/question_two_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
 
         </LinearLayout>
 
