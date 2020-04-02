@@ -10,6 +10,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -58,19 +60,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String getQuestionOneAnswer() {
 
         RadioGroup questionOneRadioGroup = findViewById(R.id.question_one_answer);
-        int selectedRadioButtonid = questionOneRadioGroup.getCheckedRadioButtonId();
-        RadioButton selectedRadioButton = findViewById(selectedRadioButtonid);
-        String questionOneAnswer = selectedRadioButton.getText().toString();
+        int selectedRadioButtonId = questionOneRadioGroup.getCheckedRadioButtonId();
 
-        return questionOneAnswer;
+        if(selectedRadioButtonId != -1 ){
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            String questionOneAnswer = selectedRadioButton.getText().toString();
+
+            return questionOneAnswer;
+        }
+
+
+        return null;
     }
 
     private String getQuestionTwoAnswer() {
 
         EditText questionTwoAnswerEditText = findViewById(R.id.question_two_answer);
-        String questionTwoAnswer = questionTwoAnswerEditText.getText().toString();
+        Object questionTwoAnswer = questionTwoAnswerEditText.getText();
 
-        return questionTwoAnswer;
+        if(questionTwoAnswer != null)
+            return questionTwoAnswer.toString();
+        else
+            return null;
     }
 
     private ArrayList<String> getQuestionThreeAnswer() {
@@ -101,11 +112,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String getQuestionFourAnswer() {
 
         RadioGroup questionFourRadioGroup = findViewById(R.id.question_four_answer);
-        int selectedRadioButtonid = questionFourRadioGroup.getCheckedRadioButtonId();
-        RadioButton selectedRadioButton = findViewById(selectedRadioButtonid);
-        String questionFourAnswer = selectedRadioButton.getText().toString();
+        int selectedRadioButtonId = questionFourRadioGroup.getCheckedRadioButtonId();
 
-        return questionFourAnswer;
+        if(selectedRadioButtonId != -1 ){
+            RadioButton selectedRadioButton = findViewById(selectedRadioButtonId);
+            String questionFourAnswer = selectedRadioButton.getText().toString();
+            return questionFourAnswer;
+        }
+
+        return null;
 
     }
 
