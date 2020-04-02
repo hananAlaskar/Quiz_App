@@ -167,7 +167,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_margin="16dp"
             android:padding="16dp"
             android:background="@android:color/white">
@@ -178,6 +178,27 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
                 android:text="Q 4" />
+
+            <TextView
+                android:id="@+id/question_four_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Entering Comments is a useless task, it will  not help in anyway." />
+
+            <RadioButton
+                android:id="@+id/radio_true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="True"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="False"/>
+
 
 
         </LinearLayout>
