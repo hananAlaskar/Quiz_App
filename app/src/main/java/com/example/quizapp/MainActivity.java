@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String questionOneAnswer = getQuestionOneAnswer();
         String questionTwoAnswer = getQuestionTwoAnswer();
         ArrayList<String> questionThreeAnswer = getQuestionThreeAnswer();
+        String questionFourAnswer = getQuestionFourAnswer();
+
     }
 
 
@@ -93,6 +95,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             questionThreeAnswer.add(checkBoxFour.getText().toString());
 
         return questionThreeAnswer;
+
+    }
+
+    private String getQuestionFourAnswer() {
+
+        RadioGroup questionFourRadioGroup = findViewById(R.id.question_four_answer);
+        int selectedRadioButtonid = questionFourRadioGroup.getCheckedRadioButtonId();
+        RadioButton selectedRadioButton = findViewById(selectedRadioButtonid);
+        String questionFourAnswer = selectedRadioButton.getText().toString();
+
+        return questionFourAnswer;
 
     }
 
