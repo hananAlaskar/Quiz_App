@@ -45,36 +45,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="A programmer is to a computer as a teacher is to"
-                />
+                android:text="A programmer is to a computer as a teacher is to" />
 
-            <RadioButton
-                android:id="@+id/question_one_radio_one"
+            <RadioGroup
+                android:id="@+id/question_one_answer"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A desk"
-                />
-            <RadioButton
-                android:id="@+id/question_one_radio_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A student"
-                />
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/question_one_radio_three"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A library"
-                />
+                <RadioButton
+                    android:id="@+id/question_one_radio_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A desk" />
 
-            <RadioButton
-                android:id="@+id/question_one_radio_four"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A principal"
-                />
+                <RadioButton
+                    android:id="@+id/question_one_radio_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A student" />
 
+                <RadioButton
+                    android:id="@+id/question_one_radio_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A library" />
+
+                <RadioButton
+                    android:id="@+id/question_one_radio_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A principal" />
+
+            </RadioGroup>
         </LinearLayout>
 
 
@@ -104,8 +106,7 @@
                 android:id="@+id/question_two_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                />
+                android:inputType="text" />
 
         </LinearLayout>
 
@@ -130,35 +131,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Select the functional programming language"
-                />
+                android:text="Select the functional programming language" />
 
             <CheckBox
                 android:id="@+id/question_three_check_box_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lisp"
-                />
+                android:text="Lisp" />
+
             <CheckBox
                 android:id="@+id/question_three_check_box_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Erlang"
-                />
+                android:text="Erlang" />
 
             <CheckBox
                 android:id="@+id/question_three_check_box_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Haskell"
-                />
+                android:text="Haskell" />
 
             <CheckBox
                 android:id="@+id/question_three_check_box_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Java"
-                />
+                android:text="Java" />
 
 
         </LinearLayout>
@@ -186,18 +183,24 @@
                 android:padding="8dp"
                 android:text="Entering Comments is a useless task, it will  not help in anyway." />
 
-            <RadioButton
-                android:id="@+id/question_four_radio_one"
+            <RadioGroup
+                android:id="@+id/question_four_answer"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="True"
-                />
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/question_four_radio_two"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="False"/>
+                <RadioButton
+                    android:id="@+id/question_four_radio_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="True" />
+
+                <RadioButton
+                    android:id="@+id/question_four_radio_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="False"/>
+
+            </RadioGroup>
 
 
 
