@@ -49,27 +49,27 @@
                 />
 
             <RadioButton
-                android:id="@+id/radio_one"
+                android:id="@+id/question_one_radio_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A desk"
                 />
             <RadioButton
-                android:id="@+id/radio_two"
+                android:id="@+id/question_one_radio_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A student"
                 />
 
             <RadioButton
-                android:id="@+id/radio_three"
+                android:id="@+id/question_one_radio_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A library"
                 />
 
             <RadioButton
-                android:id="@+id/radio_four"
+                android:id="@+id/question_one_radio_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="A principal"
@@ -134,27 +134,27 @@
                 />
 
             <CheckBox
-                android:id="@+id/CheckBox_one"
+                android:id="@+id/question_three_check_box_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lisp"
                 />
             <CheckBox
-                android:id="@+id/CheckBox_two"
+                android:id="@+id/question_three_check_box_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Erlang"
                 />
 
             <CheckBox
-                android:id="@+id/CheckBox_three"
+                android:id="@+id/question_three_check_box_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Haskell"
                 />
 
             <CheckBox
-                android:id="@+id/CheckBox_four"
+                android:id="@+id/question_three_check_box_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Java"
@@ -187,14 +187,14 @@
                 android:text="Entering Comments is a useless task, it will  not help in anyway." />
 
             <RadioButton
-                android:id="@+id/radio_true"
+                android:id="@+id/question_four_radio_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="True"
                 />
 
             <RadioButton
-                android:id="@+id/radio_false"
+                android:id="@+id/question_four_radio_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="False"/>
@@ -202,7 +202,7 @@
 
 
         </LinearLayout>
-        
+
 
 
     </LinearLayout>
