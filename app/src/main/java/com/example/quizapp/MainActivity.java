@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void getAnswer() {
 
         String questionOneAnswer = getQuestionOneAnswer();
+        String questionTwoAnswer = getQuestionTwoAnswer();
     }
 
     private String getQuestionOneAnswer() {
@@ -54,5 +56,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String questionOneAnswer = selectedRadioButton.getText().toString();
 
         return questionOneAnswer;
+    }
+
+    private String getQuestionTwoAnswer() {
+
+        EditText questionTwoAnswerEditText = findViewById(R.id.question_two_answer);
+        String questionTwoAnswer = questionTwoAnswerEditText.getText().toString();
+
+        return questionTwoAnswer;
+
     }
 }
