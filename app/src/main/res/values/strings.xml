@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="quiz">Quiz</string>
+    <string name="q_1">Q 1</string>
+    <string name="a_programmer_is_to_a_computer_as_a_teacher_is_to">A programmer is to a computer as a teacher is to</string>
+    <string name="a_desk">A desk</string>
+    <string name="a_student">A student</string>
+    <string name="a_library">A library</string>
+    <string name="a_principal">A principal</string>
+    <string name="q_2">Q 2</string>
+    <string name="what_is_fifo">What is FIFO</string>
+    <string name="q_3">Q 3</string>
+    <string name="select_the_functional_programming_language">Select the functional programming language</string>
+    <string name="lisp">Lisp</string>
+    <string name="erlang">Erlang</string>
+    <string name="haskell">Haskell</string>
+    <string name="java">Java</string>
+    <string name="q_4">Q 4</string>
+    <string name="entering_comments_is_a_useless_task_it_will_not_help_in_anyway">Entering Comments is a useless task, it will not help in anyway.</string>
+    <string name="true_choice">True</string>
+    <string name="false_choice">False</string>
+    <string name="submit">Submit</string>
 </resources>

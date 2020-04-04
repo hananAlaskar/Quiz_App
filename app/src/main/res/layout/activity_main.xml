@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,34 +16,34 @@
             android:id="@+id/title_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_margin="16dp"
-            android:padding="16dp"
             android:background="@android:color/white"
-            android:textSize="34sp"
-            android:text="Quiz" />
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="@string/quiz"
+            android:textSize="34sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="16dp"
-            android:padding="16dp"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/question_one_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:text="Q 1" />
+                android:text="@string/q_1"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/question_one_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="A programmer is to a computer as a teacher is to" />
+                android:text="@string/a_programmer_is_to_a_computer_as_a_teacher_is_to" />
 
             <RadioGroup
                 android:id="@+id/question_one_answer"
@@ -55,25 +54,25 @@
                     android:id="@+id/question_one_radio_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A desk" />
+                    android:text="@string/a_desk" />
 
                 <RadioButton
                     android:id="@+id/question_one_radio_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A student" />
+                    android:text="@string/a_student" />
 
                 <RadioButton
                     android:id="@+id/question_one_radio_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A library" />
+                    android:text="@string/a_library" />
 
                 <RadioButton
                     android:id="@+id/question_one_radio_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A principal" />
+                    android:text="@string/a_principal" />
 
             </RadioGroup>
         </LinearLayout>
@@ -82,24 +81,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="16dp"
-            android:padding="16dp"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/question_two_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:text="Q 2" />
+                android:text="@string/q_2"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/question_two_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="What is FIFO" />
+                android:text="@string/what_is_fifo" />
 
             <EditText
                 android:id="@+id/question_two_answer"
@@ -113,48 +112,48 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="16dp"
-            android:padding="16dp"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/question_three_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:text="Q 3" />
+                android:text="@string/q_3"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/question_three_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Select the functional programming language" />
+                android:text="@string/select_the_functional_programming_language" />
 
             <CheckBox
                 android:id="@+id/question_three_check_box_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lisp" />
+                android:text="@string/lisp" />
 
             <CheckBox
                 android:id="@+id/question_three_check_box_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Erlang" />
+                android:text="@string/erlang" />
 
             <CheckBox
                 android:id="@+id/question_three_check_box_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Haskell" />
+                android:text="@string/haskell" />
 
             <CheckBox
                 android:id="@+id/question_three_check_box_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Java" />
+                android:text="@string/java" />
 
 
         </LinearLayout>
@@ -163,24 +162,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="16dp"
-            android:padding="16dp"
-            android:background="@android:color/white">
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/question_four_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:text="Q 4" />
+                android:text="@string/q_4"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/question_four_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Entering Comments is a useless task, it will  not help in anyway." />
+                android:text="@string/entering_comments_is_a_useless_task_it_will_not_help_in_anyway" />
 
             <RadioGroup
                 android:id="@+id/question_four_answer"
@@ -191,16 +190,15 @@
                     android:id="@+id/question_four_radio_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="True" />
+                    android:text="@string/true_choice" />
 
                 <RadioButton
                     android:id="@+id/question_four_radio_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="False"/>
+                    android:text="@string/false_choice" />
 
             </RadioGroup>
-
 
 
         </LinearLayout>
@@ -210,6 +208,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
-            android:text="Submit" />
+            android:text="@string/submit" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
